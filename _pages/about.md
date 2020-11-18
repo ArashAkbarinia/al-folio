@@ -12,7 +12,7 @@ profile:
     <p>Giessen D-35394, Germany</p>
     <p>+49 641 99 26109</p>
 
-news: false  # includes a list of news items
+news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---

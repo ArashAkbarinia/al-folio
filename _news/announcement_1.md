@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2020-11-18 15:59:00-0400
 inline: true
 ---
 
-A simple inline announcement.
+I've been awarded with the *Spatial Award for Doctoral Studies*! :sparkles: :smile:
