@@ -6,19 +6,9 @@ description: <!---  publications by categories in reversed chronological order. 
 years: [2021, 2020, 2018, 2017, 2016]
 years_conf: [2020, 2017, 2016, 2015]
 years_book: [2020]
-arxiv_years: [2020]
+arxiv_years: [2021, 2020, 2019]
 nav: true
 ---
-
-### ongoing-research
-<div class="publications">
-
-{% for y in page.arxiv_years %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f arxiv -q @*[year={{y}}]* %}
-{% endfor %}
-
-</div>
 
 ### journals
 
@@ -53,3 +43,12 @@ nav: true
 
 </div>
 
+### ongoing-research
+<div class="publications">
+
+{% for y in page.arxiv_years %}
+  <h2 class="year">{{y}}</h2>
+  {% bibliography -f arxiv -q @*[year={{y}}]* %}
+{% endfor %}
+
+</div>
