@@ -8,9 +8,9 @@ profile:
   align: right
   image: prof_pic.png
   address: >
-    <p><a href="https://goo.gl/maps/5JyuNGde5mN2">Otto-Behaghel-Str. 10F</a></p>
+    <p><a href="https://goo.gl/maps/jjyQweU6QmHLrvey9">Alter Steinbacher Weg 38</a></p>
     <p>Giessen D-35394, Germany</p>
-    <p>+49 641 99 26109</p>
+    <p>+49 641 99 26137</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
