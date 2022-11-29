@@ -1,12 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - arashakbarinia
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - arashakbarinia/kernelphysiology
+  - arashakbarinia/DeepTHS
+  - arashakbarinia/DeepCSF
+  - arashakbarinia/ColourConstancy
+  - arashakbarinia/ColourCategorisation
+  - arashakbarinia/BoundaryDetection
