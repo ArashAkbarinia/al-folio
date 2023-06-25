@@ -28,14 +28,12 @@ animals with an immense imaginative perceptual capability. Machines match this
 intelligence on various isolated functions and I believe, soon, they reach our 
 creative perception. That's my research interest. 
 
-I work at this 
-multidisciplinary domain of brains, minds and machines aiming to answer how 
-complex behaviour arises from neuronal activity. I compare neural networks of 
-two organisations: biological versus artificial. 
+I work in this multidisciplinary domain of brains, minds and machines, aiming to answer how complex 
+behaviour arises from neuronal activity. I compare the neural networks of two organisations: 
+biological versus artificial.
 
-My focus is visual information 
-processing: oscillating in-between psychophysics of visual perception and 
-computational modelling of vision. 
+My focus is visual information processing: oscillating in-between psychophysics of visual perception
+and computational modelling of vision
 
 <!--- 
 
