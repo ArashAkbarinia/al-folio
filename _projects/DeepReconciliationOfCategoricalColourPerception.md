@@ -41,6 +41,33 @@ and relative theories.
 </p>
 
 
+1. [Rainbow](#rainbow)
+   * [Hue circle](#hue-circle-in-hsv-colour-space)
+   * [Open questions](#open-questions)
+2. [Stimuli](#stimuli)
+   * [Munsell chips](#munsell-chips)
+   * [Human data](#human-data)
+   * [Shapes](#shapes)
+3. [Experiments](#experiments)
+   * [Language models](#language-models-zero-shot-evaluation)
+   * [Vision models](#vision-models-odd-one-out-linear-classifier)
+     - [Training colour discriminator](#training-colour-discriminator)
+     - [Testing paradigm](#testing-paradigm)
+   * [Pretrained networks](#pretrained-networks)
+4. [Results](#results)
+   * [One example](#explaining-with-one-example)
+   * [Baseline](#baseline--rgb-model)
+   * [The role of language](#the-role-of-language)
+     - [CLIP – ViT-B32](#clip---vit-b32)
+     - [CLIP – ResNet50](#clip---resnet50)
+     - [ImageNet – ViT-B32](#imagenet---vit-b32)
+     - [ImageNet – ResNet50](#imagenet---resnet50)
+     - [Multimodal language-vision vs. unimodal vision](#multimodal-language-vision-vs-unimodal-vision)
+   * [The role of visual tasks](#the-role-of-visual-task)
+     - [Munsell prediction](#munsell-prediction)
+     - [Comparison across tasks](#comparison-across-tasks)
+5. [Discussion](#discussion)
+
 
 ## Rainbow
 
