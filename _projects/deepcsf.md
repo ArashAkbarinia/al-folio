@@ -4,7 +4,7 @@ title: DeepCSF
 description: Contrast Sensitivity Function (CSF) in deep networks
 img: assets/img/deepcsf/csf.png
 importance: 1
-category: work
+category: vision
 ---
 
 The contrast sensitivity function (CSF) is a fundamental signature of the visual system that has 

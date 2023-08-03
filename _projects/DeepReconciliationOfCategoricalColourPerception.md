@@ -4,7 +4,7 @@ title: colourcats
 description: Deep Reconciliation of Categorical Colour perception
 img: assets/img/DeepReconciliationOfCategoricalColourPerception/logo.png
 importance: 1
-category: work
+category: vision
 ---
 
 
