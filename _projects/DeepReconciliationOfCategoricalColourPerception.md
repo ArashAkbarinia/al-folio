@@ -35,14 +35,10 @@ colour representation in several visual tasks but also indicating a portion of c
 colour perception can only be explained by the language component, reconciling both universal 
 and relative theories.
 
-### Source code
-
-The source code to train and test networks is publicly available in our
-GitHub repository [DeepTHS](https://github.com/ArashAkbarinia/DeepTHS).
-
-The experimental materials are also publicly available upon request. Due
-to their large size (about 306MB for one layer, 1.8GB for one network), 
-they are not uploaded to GitHub.
+<p align="center">
+<a href="https://github.com/ArashAkbarinia/DeepTHS"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Source Code" style="height:25px;"></a>
+<a href="https://colab.research.google.com/github/ArashAkbarinia/arashakbarinia.github.io/blob/master/notebooks/DeepReconciliationOfCategoricalColourPerception.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Source Code" style="height:25px;"></a>
+</p>
 
 
 
