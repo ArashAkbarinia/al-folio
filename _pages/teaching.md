@@ -15,19 +15,19 @@ Organize your courses by years, topics, or universities, however you like!
 
 --->
 
- * Universitat Pompeu Fabra (Spain)
-   * Course director of Parallel and Distributed Computation, Second year bachelor students, February-August 2018.
+| University                        |                                 | Course                                                                              | Role            |           Students           |      Time       |
+|:----------------------------------|:--------------------------------|:------------------------------------------------------------------------------------|:----------------|:----------------------------:|:---------------:|
+| <img width=250/>                  | <img width=40/>                 | <img width=190/>                                                                    | <img width=90/> |       <img width=80/>        | <img width=80/> |  
+| Justus-Liebig-Universität Giessen | <span>&#x1f1e9;&#x1f1ea;</span> | [Deep Learning](https://deeplearning-jupyterbook.github.io/)                        | Instructor      |  1<sup>st</sup> year master  |  Feb-Aug 2023   |
+| Universitat Pompeu Fabra          | <span>&#x1f1ea;&#x1f1f8;</span> | <span style="color:DodgerBlue">Parallel and Distributed Computation</span>          | Director        | 2<sup>nd</sup> year bachelor |  Feb-Aug 2018   |
+| Universitat Autònoma de Barcelona | <span>&#x1f1ea;&#x1f1f8;</span> | <span style="color:DodgerBlue">Software Engineering</span>                          | Laboratory      | 2<sup>nd</sup> year bachelor |  Feb-Jun 2017   |
+| Universitat Autònoma de Barcelona | <span>&#x1f1ea;&#x1f1f8;</span> | <span style="color:DodgerBlue">Software Engineering</span>                          | Laboratory      | 2<sup>nd</sup> year bachelor |  Feb-Jun 2016   |
+| Universitat Autònoma de Barcelona | <span>&#x1f1ea;&#x1f1f8;</span> | <span style="color:DodgerBlue">Software Engineering</span>                          | Laboratory      | 2<sup>nd</sup> year bachelor |  Feb-Jun 2015   |
+| Göteborgs Universitet             | <span>&#x1f1f8;&#x1f1ea;</span> | <span style="color:DodgerBlue">Test and Verification</span>                         | Assistant       | 2<sup>nd</sup> year bachelor |  Feb-Jun 2011   |
+| Göteborgs Universitet             | <span>&#x1f1f8;&#x1f1ea;</span> | <span style="color:DodgerBlue">Software Architecture for Distributed Systems</span> | Assistant       | 2<sup>nd</sup> year bachelor |  Sep-Jan 2011   |
+| Göteborgs Universitet             | <span>&#x1f1f8;&#x1f1ea;</span> | <span style="color:DodgerBlue">System Development</span>                            | Assistant       | 2<sup>nd</sup> year bachelor |  Feb-Jun 2010   |
+| Göteborgs Universitet             | <span>&#x1f1f8;&#x1f1ea;</span> | <span style="color:DodgerBlue">Software Architecture for Distributed Systems</span> | Assistant       | 2<sup>nd</sup> year bachelor |  Sep-Jan 2010   |
+| Göteborgs Universitet             | <span>&#x1f1f8;&#x1f1ea;</span> | <span style="color:DodgerBlue">Software Engineering Project</span>                  | Assistant       | 1<sup>st</sup> year bachelor |  Sep-Jan 2010   |
+| Göteborgs Universitet             | <span>&#x1f1f8;&#x1f1ea;</span> | <span style="color:DodgerBlue">Java Programming</span>                              | Assistant       | 1<sup>st</sup> year bachelor |  Sep-Jan 2009   |
+| Göteborgs Universitet             | <span>&#x1f1f8;&#x1f1ea;</span> | <span style="color:DodgerBlue">Software Engineering Project</span>                  | Assistant       | 1<sup>st</sup> year bachelor |  Sep-Jan 2009   |
 
- * Universitat Autònoma de Barcelona (Spain)
-   * Software Engineering Practice, Second year bachelor students, February-June 2015.
-   * Software Engineering Practice, Second year bachelor students, February-June 2016.
-   * Software Engineering Practice, Second year bachelor students, February-June 2017.
-   
- * University of Gothenburg (Sweden)
-   * Test and Verification, Second year bachelor students, February-June 2011.
-   * Software Architecture for Distributed Systems, Second year bachelor students, September-January 2011.
-   * System Development, Second year bachelor students, February-June 2010.
-   * Software Architecture for Distributed Systems, Second year bachelor students, September-January 2010.
-   * Software Engineering Project, First year bachelor students, September-January 2010.
-   * Java Programming, First year bachelor students, September-January 2009.
-   * Software Engineering Project, First year bachelor students, September-January 2009.
