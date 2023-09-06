@@ -12,6 +12,10 @@ been measured extensively in several species. It is defined by the visibility th
 sinusoidal gratings at all spatial frequencies. Here, we investigated the CSF in deep neural 
 networks using the same 2AFC contrast detection paradigm as in human psychophysics.
 
+<p align="center">
+<a href="https://github.com/ArashAkbarinia/DeepCSF"><img src="https://github.com/ArashAkbarinia/arashakbarinia.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Source Code" style="height:100px;"></a>
+<a href="https://doi.org/10.1016/j.neunet.2023.04.032"><img src="https://github.com/ArashAkbarinia/arashakbarinia.github.io/blob/master/assets/img/publication_icon.png?raw=true" alt="Article" style="height:100px;"></a>
+</p>
 
 # Results
 1. [ImageNet](#imagenet)

@@ -36,8 +36,8 @@ colour perception can only be explained by the language component, reconciling b
 and relative theories.
 
 <p align="center">
-<a href="https://github.com/ArashAkbarinia/DeepTHS"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Source Code" style="height:25px;"></a>
-<a href="https://colab.research.google.com/github/ArashAkbarinia/arashakbarinia.github.io/blob/master/notebooks/DeepReconciliationOfCategoricalColourPerception.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Source Code" style="height:25px;"></a>
+<a href="https://github.com/ArashAkbarinia/DeepTHS"><img src="https://github.com/ArashAkbarinia/arashakbarinia.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Source Code" style="height:100px;"></a>
+<a href="https://colab.research.google.com/github/ArashAkbarinia/arashakbarinia.github.io/blob/master/notebooks/DeepReconciliationOfCategoricalColourPerception.ipynb"><img src="https://github.com/ArashAkbarinia/arashakbarinia.github.io/blob/master/assets/img/colab_icon.png?raw=true" alt="Notebook" style="height:100px;"></a>
 </p>
 
 
