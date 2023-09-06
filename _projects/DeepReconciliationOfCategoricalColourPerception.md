@@ -188,9 +188,7 @@ We rely on human-data for **8** chromatic colour categories *(Berlin & Kay, 1969
 We generated 2905 shapes by systematically changing five parameters of
 superellipse equation:
 
-$
-r = \left( |\frac{cos(\theta)}{a}|^{n} + |\frac{sin(\theta)}{b}|^{n} \right)^{\frac{-1}{n}}
-$
+$$ r = \left( |\frac{cos(\theta)}{a}|^{n} + |\frac{sin(\theta)}{b}|^{n} \right)^{\frac{-1}{n}} $$
 
 The idea behind using a systematic geometrical shape is to investigate the interaction
 between object shape and colour perception. This is beyond the scope of this notebook
@@ -219,7 +217,7 @@ on the network without any intermediate step:
 * Network's output is a number (the probability of the phrase matching the image).
   We take the phrase with the highest probability as the network's final output.
 * For each Munsell chip, we repeat this procedure for all shapes (2905),
-  performing **23,240 trials** ($8\times 2905$).
+  performing **23,240 trials** ($$ 8\times 2905 $$).
 
 Let's look at one example with simulated data. In this example, the network's output
 is highest for the phrase **"This is a red shape."**, therefore we take that as
@@ -348,10 +346,10 @@ at one example.
 
 We will look at the results of *Block-10* of the *ViT-B32* architecture (i.e.,
 the image encoder of CLIP). The directory name `bg128_i0` means the linear classifier
-(colour discriminator) has been trained with images of grey background ($R=G=B=127$).
+(colour discriminator) has been trained with images of grey background ($$ R=G=B=127 $$).
 
 The results are loaded into an array of shape `(320, 8, 8)`: essentially the 320
-confusion matrices of size $8 \times 8$.
+confusion matrices of size $$ 8 \times 8 $$.
 
 #### One Test chip
 
@@ -364,15 +362,15 @@ the testing paradigm:
 2. The diagonal of the matrix is 0.
 3. Higher values indicate strong categorical representation (e.g., orange versus all other colours).
    A value close to 0.50 indicates a chance level and no categorical representation.
-5. The confusion matrix cannot be reduced to the (upper/lower) triangle. The sum of $C + C^T \leq 1$,
-   where $C$ and $C^T$ denote the confusion matrix and its transpose. Their sum is not guaranteed to
+5. The confusion matrix cannot be reduced to the (upper/lower) triangle. The sum of $$ C + C^T \leq 1 $$,
+   where $$ C $$ and $$ C^T $$ denote the confusion matrix and its transpose. Their sum is not guaranteed to
    equal 1, as the selected odd index by the network can also be the identical test chip. Small numbers
-   for $C + C^T$ indicate the network's representation is not categorical. Overall, it can be
-   observed that the $C + C^T$ is quite close to 1.
+   for $$ C + C^T $$ indicate the network's representation is not categorical. Overall, it can be
+   observed that the $$ C + C^T $$ is quite close to 1.
 
 We compute the *average* winning rate of each focal colour and the highest value is
 selected as the colour of the test chip.:
-* In this example *orange* wins against other focal colours $95\%$ of the time.
+* In this example *orange* wins against other focal colours $$ 95\% $$ of the time.
 * Note that the *average* column is not a true probability distribution, the sum is not equal
   to 1.
 * A value of 0.50 indicates no categorical representation.
@@ -402,7 +400,7 @@ The plotted figure can be interpreted as follows:
 
 
 We can compute the accuracy with respect to the ground truth. In this example, the network
-predicts human data $83\%$ of time.
+predicts human data $$ 83\% $$ of time.
 
 
 We plot **x** on top of the cells where the network's prediction mismatch the human data:
@@ -457,12 +455,13 @@ We have taken RGB as the baseline because of two reasons:
 ### The role of language
 
 To assess the role of language on categorical colour perception, we compare
-the results of two sets of networks pretrained on **CLIP** and **ImageNet**:
+the results of four networks pretrained obtained from combination of two architectures:
+* **Vision Transformer (ViT) – ViT-B32** 
+* **Convolution Neural Network (CNN) – ResNet50**
 
-|   | CLIP (Multimodal language-vision) | ImageNet (Unimodal vision) |
-|---|---|---|
-| Vision Transformer (ViT) – ViT-B32  |   |   |
-| Convolution Neural Network (CNN) – ResNet50 |   |   |
+trained on two different tasks:
+* **CLIP (Multimodal language-vision)**
+* **ImageNet (Unimodal vision**).
 
 For each of these networks, we have trained several instances to ensure the
 reported results are robust. Given the high degree of similarity across
@@ -529,7 +528,17 @@ instances, below we visualise the results for instance 1.
 
 ### The role of visual task
 
-In this section, we examine how the network's task shapes its colour categories using the [Taskonomy dataset](http://taskonomy.stanford.edu/), which contains about four million images (mainly indoor scenes from 2265 different buildings) and their corresponding labels for 25 computer vision tasks. The dataset also provides pretrained networks with an encoder-decoder architecture for all visual tasks. The encoder is the same across all pretrained networks (i.e., ResNet50), which maps the input image ($224 \times 224$) into a latent representation of size 1568 ($14 \times 14 \times 8$). The decoder design varies according to the dimensionality of the task output. The encoder offers a unique opportunity to study the role of visual tasks on the representation a network learns, given its architecture is identical across tasks and has been trained on the same set of images. Similar to ImageNet pretrained networks, we trained a linear classifier on top of the encoder's extracted features from each Taskonomy pretrained network.
+In this section, we examine how the network's task shapes its colour categories using the [Taskonomy dataset](http://taskonomy.stanford.edu/), 
+which contains about four million images (mainly indoor scenes from 2265 different buildings) and 
+their corresponding labels for 25 computer vision tasks. The dataset also provides pretrained 
+networks with an encoder-decoder architecture for all visual tasks. The encoder is the same across 
+all pretrained networks (i.e., ResNet50), which maps the input image ($$ 224 \times 224 $$) into a 
+latent representation of size 1568 ($$ 14 \times 14 \times 8 $$). The decoder design varies 
+according to the dimensionality of the task output. The encoder offers a unique opportunity to 
+study the role of visual tasks on the representation a network learns, given its architecture is 
+identical across tasks and has been trained on the same set of images. Similar to ImageNet 
+pretrained networks, we trained a linear classifier on top of the encoder's extracted features from 
+each Taskonomy pretrained network.
 
 
 #### Munsell prediction
