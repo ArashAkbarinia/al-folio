@@ -125,6 +125,30 @@ the continuous function in discrete categories.
 </div> 
     
 
+#### RGB prediction
+
+We can pass this rainbow image to a computational model and check its categorisation.
+The simplest model is the Euclidean distance towards focal colour categories. We
+consider two types of *focal colours*:
+1. Uniformly selected within the rainbow image.
+2. Focal colour categories from human data.
+
+We can observe that this model created bands of equal width when the *focal colours*
+are selected uniformly. This is rather trivial. There is no categorical effect in
+a continuous space. Nevertheless, this reemphasises that any categorical colours
+we perceive in the rainbow image are purely driven by our visual system.
+
+In the second scenario, where focal colours are selected from human data, we observe
+that the RGB prediction is not uniform but still does not resemble our perception.
+For instance, The blue and orange categories are disproportionally large suggesting the
+computation behind our categorical colour perception is not a simple 
+smallest distance in the input space and some nonlinearity is necessary.
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/rgb_rainbow.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div> 
 
 ### Open questions
 
@@ -451,6 +475,46 @@ We have taken RGB as the baseline because of two reasons:
  * The input colour space to networks is RGB (i.e., the pretrained datasets are in RGB).
    Therefore we can analyse how much the colour categories alter from the
    input representation to the network's internal representation.
+
+Below, we have visualised the prediction from six different colour spaces. We can
+observe that although simple Euclidean distance in colour spaces can predict the
+human data to a certain extent, the error rate remains high (about 30%).
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/colourspace_68_1.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div> 
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/colourspace_68_2.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div> 
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/colourspace_68_0.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div>
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/colourspace_68_3.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div> 
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/colourspace_68_4.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div> 
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/colourspace_68_5.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div> 
 
 ### The role of language
 
