@@ -584,7 +584,7 @@ instances, below we visualise the results for instance 1.
     
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/output_74_0.png" class="img-fluid rounded z-depth-1" %}	
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/clip_vs_imagenet.png" class="img-fluid rounded z-depth-1" %}	
     </div>
 </div> 
     
@@ -854,10 +854,46 @@ each Taskonomy pretrained network.
     
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/output_81_0.png" class="img-fluid rounded z-depth-1" %}	
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/taskonomy.png" class="img-fluid rounded z-depth-1" %}	
     </div>
 </div> 
     
+
+
+#### Individual colour categories
+
+We can compute the accuracy for each of the colour categories separately to
+analyse whether certain categories systematically obtain higher accuracy
+in comparison to the average. The figure below shows the individual colour
+categories averaged across all twenty-four tasks.
+
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/output_90_0.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div>
+
+
+### Rainbow qualitative prediction
+
+So far we have looked at the network's prediction of Munsell chips and analysed them
+quantitatively. We can now qualitatively look at the network's prediction of the rainbow 
+image. Overall, we can observe that the networks' prediction, at deeper layers,
+captures well our categorical perception. The language prediction particularly stands out.
+The only difference between the network's prediction and my subjective colour perception 
+is the colour of cyan. But of course, the network was never prompted with this 
+colour term.
+
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/output_93_0.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/output_94_0.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div>
 
 
 ## Discussion
