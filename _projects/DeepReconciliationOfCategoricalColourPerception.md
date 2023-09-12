@@ -896,6 +896,20 @@ colour term.
 </div>
 
 
+#### Additional colour terms
+
+We tested the language models with an additional colour term **cyan** to check whether
+it could perfectly predict our perception of the rainbow. The results are presented in 
+the figure below. We can see that both CLIP models, irrespective of the architecture of
+their vision encoder predict the cyan rings in between blue and green categories.
+
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/output_97_0.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div>
+
 ## Discussion
 
 * **Unimodal vision** models explain 85% of human data.
