@@ -8,7 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
-  address: >
+  more_info: >
     <p><a href="https://goo.gl/maps/jjyQweU6QmHLrvey9">Alter Steinbacher Weg 38</a></p>
     <p>Giessen D-35394, Germany</p>
     <p>+49 641 99 26137</p>

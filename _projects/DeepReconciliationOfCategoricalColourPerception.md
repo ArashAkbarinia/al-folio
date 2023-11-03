@@ -5,10 +5,12 @@ description: Deep Reconciliation of Categorical Colour perception
 img: assets/img/DeepReconciliationOfCategoricalColourPerception/logo.png
 importance: 1
 category: vision
+toc:
+  sidebar: left
 ---
 
 
-# Deep Reconciliation of Categorical Colour perception
+# Abstract
 
 We perceive colours categorically. Our perceptual system separates a continuous space into distinct 
 categories. The most prominent example is the rainbow, there are no discontinuities in its colour
@@ -69,7 +71,7 @@ and relative theories.
 5. [Discussion](#discussion)
 
 
-## Rainbow
+# Rainbow
 
 There are no discontinuities in the electromagnetic spectrum of the light reaching us 
 from a rainbow and yet we see hues clearly separated by colour categories.
@@ -77,7 +79,7 @@ from a rainbow and yet we see hues clearly separated by colour categories.
 To make this more tangible, we can simulate a rainbow and check the numerical values
 of its constituent hues.
 
-### Hue circle in HSV colour space
+## Hue circle in HSV colour space
 
 We create a list of 180 hues with constant saturation and values.
 
@@ -96,7 +98,7 @@ RGB space that is obtained from camera sensitivity functions.
     
 
 
-### Coloured arches
+## Coloured arches
 
 The visualisation of the hue circle does not have a spatial resolution (i.e., only one row),
 to better appreciate the categorical colour phenomenon, we convert the hue circle into
@@ -125,7 +127,7 @@ the continuous function in discrete categories.
 </div> 
     
 
-#### RGB prediction
+### RGB prediction
 
 We can pass this rainbow image to a computational model and check its categorisation.
 The simplest model is the Euclidean distance towards focal colour categories. We
@@ -150,7 +152,7 @@ smallest distance in the input space and some nonlinearity is necessary.
     </div>
 </div> 
 
-### Open questions
+## Open questions
 
 This is a fascinating phenomenon that raises the following questions:
 1. Why do we perceive a continuous function in different categories?
@@ -170,11 +172,11 @@ aspects of categorical colour perception:
 4. We compare representation at different **intermediate layers** to investigate
    whether this is **low-, mid, or high-level** representation.
 
-## Stimuli
+# Stimuli
 
 In this section we describe the stimuli set we used to evaluate networks.
 
-### Munsell chips
+## Munsell chips
 
 We use 320 *Munsell chips* to evaluate our networks. These chips have been extensively
 used in the literature of categorical colour perception.
@@ -186,7 +188,7 @@ used in the literature of categorical colour perception.
 </div> 
     
 
-### Human data
+## Human data
 
 We rely on human-data for **8** chromatic colour categories *(Berlin & Kay, 1969; Sturges & Whitfield, 1995)*.
 
@@ -207,7 +209,7 @@ We rely on human-data for **8** chromatic colour categories *(Berlin & Kay, 1969
     
 
 
-### Shapes
+## Shapes
 
 We generated 2905 shapes by systematically changing five parameters of
 superellipse equation:
@@ -228,9 +230,9 @@ We can plot 25 of those superellipses randomly.
     
 
 
-## Experiments
+# Experiments
 
-### Language models: zero-shot evaluation
+## Language models: zero-shot evaluation
 
 For the language models (i.e., **CLIP**) we can directly conduct psychophysics
 on the network without any intermediate step:
@@ -257,7 +259,7 @@ shapes would be the final prediction of the network for this colour.
     
 
 
-### Vision models: odd-one-out linear classifier
+## Vision models: odd-one-out linear classifier
 
 It is impossible to directly ask a neural network trained on a task like object 
 recognition about colour categories, as the neural network was specifically 
@@ -271,7 +273,7 @@ the categorical colour perception in vision models consists of two steps:
    classifier trained for the colour discrimination 4AFC task. We refer to
    the trained linear classifier as a **colour-discriminator**.
 
-#### Training colour-discriminator
+### Training colour-discriminator
 
 The figure below shows the schematics of our training process.
 
@@ -290,7 +292,7 @@ layers from the early to final layer:
    of residual blocks).
  * In the case of `ViT-B32` from blocks `[1, 4, 7, 10, 11]`.
 
-#### Train images
+### Train images
 
 During the training, the linear classifier is input with four images:
  * Three of those are identical.
@@ -311,7 +313,7 @@ uniform distribution
     
 
 
-#### Testing paradigm
+### Testing paradigm
 
 At test time, for each Munsell chip, we evaluate against all sets of focal colour pairs. 
 For instance, for the `munsell_chips[3][2]`, we input the network with the following four
@@ -348,7 +350,7 @@ For the same test chip, we repeat this procedure for all 28 combinations of pair
 We assign the colour that wins the most trials across all tests/shapes as the colour of the test
 chip.
 
-### Pretrained networks
+## Pretrained networks
 
 Architectures:
 * **Vision Transformers (ViT)** – *ViT-B32*
@@ -361,12 +363,12 @@ Pretrained task:
 
 Inetrmediate layers: six distinct layers corresponding to low-, mid- and high-level visual representation.
 
-## Results
+# Results
 
 To better understand the data crunch from raw data to plotted figures, we look
 at one example.
 
-### Explaining with one example
+## Explaining with one example
 
 We will look at the results of *Block-10* of the *ViT-B32* architecture (i.e.,
 the image encoder of CLIP). The directory name `bg128_i0` means the linear classifier
@@ -375,7 +377,7 @@ the image encoder of CLIP). The directory name `bg128_i0` means the linear class
 The results are loaded into an array of shape `(320, 8, 8)`: essentially the 320
 confusion matrices of size $$ 8 \times 8 $$.
 
-#### One Test chip
+### One Test chip
 
 We can simply print the confusion matrix for one particular Munsell chip. We do that
 for **chip at index 122** which corresponds to the test colour we visualised when explaining
@@ -407,7 +409,7 @@ selected as the colour of the test chip.:
     
 
 
-#### All chips
+### All chips
 
 We compute the colour of each Munsell chip following the procedure above. We can plot this
 in the same format as the original Munsell image.
@@ -437,7 +439,7 @@ We plot **x** on top of the cells where the network's prediction mismatch the hu
 </div> 
     
 
-### Baseline – RGB Model
+## Baseline – RGB Model
 
 To put the obtained results with networks into perspective we compare them to 
 the "RGB Model" that assigns the closest colour category (smallest Euclidean 
@@ -516,7 +518,7 @@ human data to a certain extent, the error rate remains high (about 30%).
     </div>
 </div> 
 
-### The role of language
+## The role of language
 
 To assess the role of language on categorical colour perception, we compare
 the results of four networks pretrained obtained from combination of two architectures:
@@ -533,7 +535,7 @@ instances, below we visualise the results for instance 1.
 
 
 
-#### CLIP - ViT-B32
+### CLIP - ViT-B32
 
     
 <div class="row">
@@ -544,7 +546,7 @@ instances, below we visualise the results for instance 1.
     
 
 
-#### CLIP - ResNet50
+### CLIP - ResNet50
 
 
     
@@ -556,7 +558,7 @@ instances, below we visualise the results for instance 1.
     
 
 
-#### ImageNet - ViT-B32
+### ImageNet - ViT-B32
 
 
     
@@ -568,7 +570,7 @@ instances, below we visualise the results for instance 1.
     
 
 
-#### ImageNet - ResNet50
+### ImageNet - ResNet50
 
 
     
@@ -580,7 +582,7 @@ instances, below we visualise the results for instance 1.
     
 
 
-#### Multimodal language-vision vs. Unimodal vision
+### Multimodal language-vision vs. Unimodal vision
     
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
@@ -590,7 +592,7 @@ instances, below we visualise the results for instance 1.
     
 
 
-### The role of visual task
+## The role of visual task
 
 In this section, we examine how the network's task shapes its colour categories using the [Taskonomy dataset](http://taskonomy.stanford.edu/), 
 which contains about four million images (mainly indoor scenes from 2265 different buildings) and 
@@ -605,7 +607,7 @@ pretrained networks, we trained a linear classifier on top of the encoder's extr
 each Taskonomy pretrained network.
 
 
-#### Munsell prediction
+### Munsell prediction
 
 
 
@@ -847,7 +849,7 @@ each Taskonomy pretrained network.
     
 
 
-#### Comparison across tasks
+### Comparison across tasks
 
 
 
@@ -860,7 +862,7 @@ each Taskonomy pretrained network.
     
 
 
-#### Individual colour categories
+### Individual colour categories
 
 We can compute the accuracy for each of the colour categories separately to
 analyse whether certain categories systematically obtain higher accuracy
@@ -875,7 +877,7 @@ categories averaged across all twenty-four tasks.
 </div>
 
 
-### Rainbow qualitative prediction
+## Rainbow qualitative prediction
 
 So far we have looked at the network's prediction of Munsell chips and analysed them
 quantitatively. We can now qualitatively look at the network's prediction of the rainbow 
@@ -896,7 +898,7 @@ colour term.
 </div>
 
 
-#### Additional colour terms
+### Additional colour terms
 
 We tested the language models with an additional colour term **cyan** to check whether
 it could perfectly predict our perception of the rainbow. The results are presented in 
@@ -910,7 +912,7 @@ their vision encoder predict the cyan rings in between blue and green categories
     </div>
 </div>
 
-## Discussion
+# Discussion
 
 * **Unimodal vision** models explain 85% of human data.
 * The remaining 15% is explained by **multimodal vision-language** models.

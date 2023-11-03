@@ -15,7 +15,7 @@ Organize your courses by years, topics, or universities, however you like!
 
 --->
 
-| <span style="display: inline-block; width:150px">University</span> | <span style="display: inline-block; width:50px">Country</span> | <span style="display: inline-block; width:75px">Course</span>                       | Role            | <span style="display: inline-block; width:50">Students</span> |      Time       |
+| <span style="display: inline-block; width:150px">University</span> | Country | <span style="display: inline-block; width:75px">Course</span>                       | Role            | <span style="display: inline-block; width:50">Students</span> |      Time       |
 |:-------------------------------------------------------------------|:----------------------------------------------------------------------------:|:------------------------------------------------------------------------------------|:----------------|:-------------------------------------------------------------:|:---------------:| 
 | Justus-Liebig-Universität Giessen                                  |                       <span>&#x1f1e9;&#x1f1ea;</span>                        | [Deep Learning](https://deeplearning-jupyterbook.github.io/)                        | Instructor      |                  1<sup>st</sup> year master                   |  Feb-Aug 2023   |
 | Universitat Pompeu Fabra                                           |                       <span>&#x1f1ea;&#x1f1f8;</span>                        | <span style="color:DodgerBlue">Parallel and Distributed Computation</span>          | Director        |                 2<sup>nd</sup> year bachelor                  |  Feb-Aug 2018   |
