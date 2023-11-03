@@ -5,7 +5,7 @@ permalink: /projects/
 description: 
 nav: True
 nav_order: 2
-display_categories: [vision]
+display_categories: [vision, books]
 horizontal: false
 ---
 
