@@ -1,7 +1,7 @@
 ---
 layout: page
 title: colourcats
-description: Deep Reconciliation of Categorical Colour perception
+description: Deep Reconciliation of Categorical Colour Perception
 img: assets/img/DeepReconciliationOfCategoricalColourPerception/logo.png
 importance: 1
 category: vision
