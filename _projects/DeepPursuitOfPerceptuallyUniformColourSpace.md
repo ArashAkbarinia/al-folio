@@ -495,7 +495,7 @@ the image encoder of CLIP). The directory name `bg128_i0` means the linear class
 
 ### Raw sensitivity thresholds
 
-In the figure below, we have visualised the sensitivity threshold for **125 test points** summing to a total of **3274 comparisons**. The inserts are sorted following the standard deviation in sensitivity thresholds for the test colours. In each insert, the square marker indicates the test colour whose RGB coordinates are also written in the title.
+In the figure below, we have visualised the sensitivity threshold for **125 test points** summing to a total of **3152 comparisons**. The inserts are sorted following the standard deviation in sensitivity thresholds for the test colours. In each insert, the square marker indicates the test colour whose RGB coordinates are also written in the title.
 All circles correspond to the sensitivity threshold in different directions.
 
 We can observe:
@@ -520,7 +520,7 @@ We can compute the uniformity metric (standard deviation among distances) for di
 spaces and colour difference metrics. Overall, we can see the values of $$\sigma$$ are small across
 colour spaces:
 * Smaller standard deviation in YCC and DKL colour space in comparison to RGB suggests these colour spaces are perceptually more uniform for this layer.
-* $$\Delta E$$ of 2.58 is slightly above JND, suggesting the network's colour sensitivity is not far away from humans.
+* $$\Delta E$$ of 2.56 is slightly above JND, suggesting the network's colour sensitivity is not far away from humans.
 
 
 
