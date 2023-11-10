@@ -624,6 +624,12 @@ deep layers) we illustrate the sensitivity thresholds for all eight corners of t
     
 
 
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepPursuitOfPerceptuallyUniformColourSpace/output_99_0.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div> 
+
 
 
 ### Transformer vs. Convolution Networks
@@ -645,7 +651,7 @@ across two tasks and two architectures:
     
 
 
-## Optimising a uniform space
+# Optimising a uniform space
 
 Now that we have measured a large set of sensitivity thresholds for a network/layer, we can
 use optimisation techniques to transform the input space (RGB, i.e., the input space of all
@@ -663,7 +669,7 @@ uniform space.
 The benefit of the "neural networks" approach is its flexibility in finding an optimal solution.
 The drawback is that the inverse to RGB is not given and must be approximated.
 
-### Neural networks
+## Neural networks
 
 We can train a simple neural network with a few hidden (intermediate) layers to transform RGB
 input space to output network-space. An example of such a network is depicted in the figure below:
@@ -696,7 +702,7 @@ We can perform a hyperparameter search about:
 We train our *perceptually uniform colour space network* (**PucsNet**) with following settings:
 * 0.1 learning rate, which is reduced by one order of magnitude at every one-third of total epochs.
 * 5000 epochs
-* At every epoch, PucsNet transfers 3274 RGB points into the new space.
+* At every epoch, PucsNet transfers 3152 RGB points into the new space.
 * The main term in the loss function is the uniformity metric (i.e., standard deviation among all measured distances). However, without any further constraint, the first solution the network finds is to make the data range tiny, which is not a valid solution. Therefore, we add a second term to our loss function to ensure the output range is approximately 0 to 1. 
 
 
@@ -718,7 +724,7 @@ We report the network training evolution with the following figure:
 The instance below contains two hidden layers of each 8 units:
 * The loss function although noisy steadily drops as we progress in the number of epochs. Note that the first peak at epoch 0 is because the first solution the network finds is to shrink the space range, but afterwards, it should satisfy the second constraint that brings the range of output to the range of 0 to 1.
 * Network predicts human ellipses better than $$\Delta E2000$$ (compare solid to dashed lines: lower values indicate more uniform space). However, it is also important to note that the prediction power of the network does not change as a function of epochs, suggesting that the initial weights make a significant impact.
-* Network predicts human colour differences data equally good as $$Delta E2000$$. It is important to note that PucsNet is only trained with pretrained colour discrimination thresholds, the fact that it obtains decent results in colour difference (a similar but different paradigm) suggests the newfound space is indeed capturing other aspects of human colour vision.
+* Network predicts human colour differences data equally good as $$\Delta E2000$$. It is important to note that PucsNet is only trained with pretrained colour discrimination thresholds, the fact that it obtains decent results in colour difference (a similar but different paradigm) suggests the newfound space is indeed capturing other aspects of human colour vision.
 
 
 
