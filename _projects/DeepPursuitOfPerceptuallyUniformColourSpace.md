@@ -597,10 +597,6 @@ deep layers) we illustrate the sensitivity thresholds for all eight corners of t
 
 ### ImageNet - ViT-B32
 
-
-
-
-
     
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
@@ -608,6 +604,12 @@ deep layers) we illustrate the sensitivity thresholds for all eight corners of t
     </div>
 </div> 
     
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepPursuitOfPerceptuallyUniformColourSpace/output_95_0.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div> 
 
 
 ### ImageNet - ResNet50
