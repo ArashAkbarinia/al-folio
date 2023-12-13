@@ -2,9 +2,9 @@ github_users:
   - arashakbarinia
 
 github_repos:
+  - arashakbarinia/osculari
   - arashakbarinia/kernelphysiology
-  - arashakbarinia/DeepTHS
   - arashakbarinia/DeepCSF
   - arashakbarinia/ColourConstancy
-  - arashakbarinia/ColourCategorisation
+  - arashakbarinia/neurobit
   - arashakbarinia/BoundaryDetection
