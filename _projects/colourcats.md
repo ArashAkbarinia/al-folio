@@ -12,34 +12,28 @@ toc:
 
 # Abstract
 
-We perceive colours categorically. Our perceptual system separates a continuous space into distinct 
-categories. The most prominent example is the rainbow, there are no discontinuities in its colour
-spectrum, yet we see discrete bands. The underlying reason, particularly the role of language, 
-has spawned a heated debate between universalists and relativists. We reconcile these two 
-explanations by studying vision-language and pure-vision deep neural networks (DNN). The results of 
-our odd-one-out experiments show that pure-vision models 
-(e.g., ImageNet object recognition networks) explain 85% of human data. In turn, suggesting 
-a large part of our categorical colour perception is purely driven by visual signals. 
-The remaining 15% is explained with vision-language models 
-(e.g., CLIP text-image matching networks) even when tested without their language module. 
-In turn, suggesting colour categories is a free-from-language representation, yet linguistic 
-colour terms have influenced its development. We investigated whether colour categories emerge
-in all pure-vision models by studying Taskonomy networks trained on 24 visual tasks. 
-Human-like colour categories appear only in less than half of those models, namely, 
-networks trained on semantic (e.g., image segmentation, object recognition, and 
-scene classification) or 3D tasks (e.g., shade from shaping, surface normal prediction, 
-and depth estimation). Our results show low-level tasks (e.g., autoencoding and denoising) 
-never obtain human-like colour categories. It also matters whether a network is trained on 
-2- or 3-dimensional outputs for the same perceptual task. Networks trained on 3D tasks of 
-edge and keypoint detection obtain human-like colour categories but not their corresponding 
-2D networks. Overall, our findings provide evidence for the utility of categorical 
-colour representation in several visual tasks but also indicating a portion of categorical 
-colour perception can only be explained by the language component, reconciling both universal 
-and relative theories.
+This study delves into the categorical aspects of colour perception, 
+employing the odd-one-out paradigm on artificial neural networks. 
+We reveal a significant alignment between human data and unimodal 
+vision networks (e.g., ImageNet object recognition). Vision-language 
+models (e.g., CLIP text-image matching) account for the remaining 
+unexplained data even in non-linguistic experiments. These results 
+suggest that categorical colour perception is a language-independent 
+representation, albeit partly shaped by linguistic colour terms during 
+its development. Exploring the ubiquity of colour categories in 
+Taskonomy unimodal vision networks highlights the task-dependent nature 
+of colour categories, predominantly in semantic and 3D tasks, with a 
+notable absence in low-level tasks. To explain this difference, we 
+analysed kernels' responses before the winner-taking-all, observing 
+that networks with mismatching colour categories align in continuous 
+representations. Our findings quantify the dual influence of visual 
+signals and linguistic factors in categorical colour perception, thereby 
+formalising a harmonious reconciliation of the universal and relative debates.
 
 <p align="center">
 <a href="https://github.com/ArashAkbarinia/DeepTHS"><img src="https://github.com/ArashAkbarinia/arashakbarinia.github.io/blob/master/assets/img/github_icon.png?raw=true" alt="Source Code" style="height:100px;"></a>
 <a href="https://colab.research.google.com/github/ArashAkbarinia/arashakbarinia.github.io/blob/master/notebooks/DeepReconciliationOfCategoricalColourPerception.ipynb"><img src="https://github.com/ArashAkbarinia/arashakbarinia.github.io/blob/master/assets/img/colab_icon.png?raw=true" alt="Notebook" style="height:100px;"></a>
+<a href="https://www.biorxiv.org/content/10.1101/2024.01.25.577209v1.full.pdf"><img src="https://github.com/ArashAkbarinia/arashakbarinia.github.io/blob/master/assets/img/publication_icon.png?raw=true" alt="Article" style="height:100px;"></a>
 </p>
 
 
@@ -94,8 +88,7 @@ RGB space that is obtained from camera sensitivity functions.
 	<div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/output_15_0.png" class="img-fluid rounded z-depth-1" %}	
     </div>
-</div> 
-    
+</div>
 
 
 ## Coloured arches
@@ -211,10 +204,10 @@ We rely on human-data for **8** chromatic colour categories *(Berlin & Kay, 1969
 
 ## Shapes
 
-We generated 2905 shapes by systematically changing five parameters of
+We generated 2904 shapes by systematically changing five parameters of
 superellipse equation:
 
-$$ r = \left( |\frac{cos(\theta)}{a}|^{n} + |\frac{sin(\theta)}{b}|^{n} \right)^{\frac{-1}{n}} $$
+$$  \left| \frac{x}{a} \right| ^{m} + \left| \frac{y}{b} \right| ^{n} = 1 $$
 
 The idea behind using a systematic geometrical shape is to investigate the interaction
 between object shape and colour perception. This is beyond the scope of this notebook
@@ -242,12 +235,12 @@ on the network without any intermediate step:
   these terms: **red, orange, yellow, brown, green, blue, purple, pink**.
 * Network's output is a number (the probability of the phrase matching the image).
   We take the phrase with the highest probability as the network's final output.
-* For each Munsell chip, we repeat this procedure for all shapes (2905),
-  performing **23,240 trials** ($$ 8\times 2905 $$).
+* For each Munsell chip, we repeat this procedure for all shapes (2904),
+  performing **23,232 trials** ($$ 8\times 2904 $$).
 
 Let's look at one example with simulated data. In this example, the network's output
 is highest for the phrase **"This is a red shape."**, therefore we take that as
-the network has placed this colour into the red category. The average across all 2905
+the network has placed this colour into the red category. The average across all 2904
 shapes would be the final prediction of the network for this colour.
 
     
@@ -873,6 +866,58 @@ categories averaged across all twenty-four tasks.
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/output_90_0.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div>
+
+
+## Internal representation
+
+The comparison of networks/layers to human data has revealed a distinct division. 
+Some networks/layers closely approximate human colour categories, while others fail to 
+align with them. This raises the question of whether there is a fundamental difference in 
+how these two groups of layers/networks represent colours. It is important to note that networks' 
+colour categories are determined through a winner-take-all operation on an eight-class 
+distribution. This is essentially a discrete procedure where one colour wins the category 
+while the rest are silenced. However, before the discretisation stage, the underlying 
+representation is a continuous distribution of the winning ratio among pairs of colour 
+categories, which is a matrix of size $$8 \times 8$$. To compare the internal representations 
+of colour categories in networks/layers, we calculated the average Spearman correlation 
+coefficients on this eight-class confusion matrix for each Munsell chip.
+
+### CLIP - ImageNet
+The continuous representation (upper triangle) exhibits better agreement across 
+networks/layers compared to the discrete categories (lower triangle). The average 
+correlation in categorical distributions (continuous) across all layers of CLIP/ImageNet 
+ViT-B32/ResNet50 networks is $$0.63 \pm 0.12$$. In contrast, the percentage of matching 
+colour categories (discrete) shows both a lower average and higher standard deviation 
+($$0.54 \pm 0.18$$), indicating that the underlying continuous representations are significantly
+more similar than the discrete colour categories. This heightened correlation in the
+underlying continuous representation is particularly evident within the layers of a 
+single network (depicted by dark-bordered squares; $$r_s=0.72 \pm 0.04$$), and it is 
+notably pronounced in ViT networks.
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/clip_imagenet_internal.png" class="img-fluid rounded z-depth-1" %}	
+    </div>
+</div>
+
+
+### Taskonomy
+
+The presented comparisons between networks are averaged over layerwise values (i.e., six layers). 
+The first notable observation is the low ratio of matching colour categories across all 24 
+Taskonomy networks (purple cells in the lower triangle). This observation is not surprising, 
+given the substantial variation in accuracy when explaining human data across different tasks. 
+A second noteworthy pattern is the moderate green cells in the upper triangle, indicating a 
+decent correlation ($$r_s=0.65$$) in the categorical distribution of most visual tasks, except the 
+networks trained on 2D tasks (blue labels). This strongly suggests that although the winner 
+colour categories for these networks are notably different, the underlying representation is not 
+significantly dissimilar.
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/DeepReconciliationOfCategoricalColourPerception/taskonomy_internal.png" class="img-fluid rounded z-depth-1" %}	
     </div>
 </div>
 
